@@ -2,7 +2,6 @@ package mx.com.gm.sga.domain;
 
 import java.io.Serializable;
 import javax.persistence.*;
-import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "usuario")
@@ -16,19 +15,12 @@ public class Usuario implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Basic(optional = false)
     @Column(name = "id_usuario")
     private Integer idUsuario;
 
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
     @Column(name = "username")
     private String username;
 
-    @Basic(optional = false)
-    @NotNull
-    @Size(min = 1, max = 45)
     @Column(name = "password")
     private String password;
 
